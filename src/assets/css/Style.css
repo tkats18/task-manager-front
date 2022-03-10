@@ -158,3 +158,23 @@ body{
 .j-c-f-e{
     justify-content: flex-end !important;
 }
+
+
+.react-datepicker__input-container> input{
+    display: block;
+    padding: 0.47rem  0.75rem;
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin: 11px;
+    width: 92%;
+    height: 40px;
+}

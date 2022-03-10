@@ -1,0 +1,208 @@
+.table-responsive{
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.root{
+    height: 800px !important;
+}
+.table-body > tr{
+    background-color: #fff;
+}
+.table-body > tr> td,  th {
+    padding: 10px;
+}
+.table-body > tr>   th {
+    text-align: initial;
+}
+.text-truncate{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.badge{
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+.text-muted {
+    color: #74788d!important;
+}
+
+h5{
+    font-size: 14px!important;
+    color: #343a40!important;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+}
+.badge-primary {
+    background-color: #34c38f!important;
+}
+
+.badge-danger {
+    background-color: #df3a25!important;
+}
+.badge-yellow{
+    background-color: #e0eb4d!important;
+
+}
+
+.mdi-dots-horizontal:before {
+    content: "\F01D8";
+}
+
+.mdi-set, .mdi:before {
+    display: inline-block;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.dropdown-menu {
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+    -webkit-animation-name: DropDownSlide;
+    animation-name: DropDownSlide;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    margin: 0;
+    position: absolute;
+    z-index: 1000;
+}
+
+.dropdown-menu-end {
+    left: auto!important;
+    right: 0!important;
+}
+
+
+.dropdown{
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    min-width: 10rem;
+    padding: .5rem 0;
+    font-size: .8125rem;
+    color: #495057;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0 solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
+.dropdown-menu-end[style] {
+    left: auto!important;
+    right: 0!important;
+}
+
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .35rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    font-family: "Poppins",sans-serif;
+    text-decoration: none;
+}
+
+h5,p{
+    width: 300px !important;
+}
+
+.tag-item{
+    width: 25%;
+    margin: 5px;
+}
+
+.badge-tag{
+    background-color: #847cee;
+}
+
+.nav {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 40px;
+    padding: 24px;
+}
+.nav-item{
+    display: flex;
+    cursor: pointer;
+    height: 100%;
+}
+.nav-link{
+    width: 100%;
+
+}
+.nav-justified .nav-item, .nav-justified>.nav-link {
+    -webkit-flex-basis: 0;
+    flex-basis: 0;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #556ee6;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-pills .nav-link {
+    background: none;
+    border: 0;
+    border-radius: .25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-content>.tab-pane {
+    display: none;
+}
+
+.tab-content>.active {
+    display: block;
+}
+

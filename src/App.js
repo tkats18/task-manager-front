@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route,Switch } from 'react-router-dom';
 import AppNav from "./components/Nav"
 
 import "./assets/css/Style.css"
+import "./assets/css/Modal.css"
 import LogoutPage from "./pages/Logout";
 import RegisterPage from "./pages/Register";
 import MainPage from "./pages/MainPage";
