@@ -23,7 +23,6 @@ const TaskAssignModal = ({params, fetchData, handleVisible}) => {
                 }
             }
         ).then(res=>{
-            console.log(res)
             setUserOptions(res.data.map((val)=> ({label:val.email, value:val.userBusinessKey})))
         }).catch(error=>{
             if (error.response && error.response.status===403){
@@ -44,7 +43,6 @@ const TaskAssignModal = ({params, fetchData, handleVisible}) => {
             }
         ).then(res=>{
             console.log(res)
-            fetchData()
             handleVisible(false)
         }).catch(error=>{
             if (error.response && error.response.status===403){

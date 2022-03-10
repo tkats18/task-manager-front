@@ -1,5 +1,11 @@
 export const TaskStatusList = [
-    {label:"NOT_DONE", value:"NOT_DONE"},
-    {label:"IN_PROGRESS",value:"IN_PROGRESS"},
-    {label:"DONE", value:"DONE"}
+    {label:"Not Done", value:"NOT_DONE"},
+    {label:"In Progress",value:"IN_PROGRESS"},
+    {label:"Done", value:"DONE"}
+]
+
+export const TaskDueList = [
+    {label:"Overdue", value:"OVERDUE"},
+    {label:"Upcoming",value:"UPCOMING"},
+    {label:"Near due", value:"NEAR_DUE"}
 ]

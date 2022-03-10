@@ -17,7 +17,7 @@ const User = (state = {}, action) => {
             return {
                 ...state,
                 authorized:localStorage.getItem('token')!==null,
-                userData:localStorage.getItem('username')
+                userData:localStorage.getItem('email')
 
             }
     }

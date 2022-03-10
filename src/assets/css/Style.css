@@ -178,3 +178,21 @@ body{
     width: 92%;
     height: 40px;
 }
+
+.task-filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.task-filter-wrapper{
+    width: 620px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.filter-item {
+    width: 200px;
+    margin-right: 10px;
+}
