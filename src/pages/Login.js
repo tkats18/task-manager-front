@@ -1,7 +1,7 @@
 import axios from "axios"
 import React, { useState } from "react"
 import {  Input,Button} from "reactstrap"
-import "../assests/css/Login.css"
+import "../assets/css/Login.css"
 import { useDispatch } from "react-redux"
 import { useHistory } from 'react-router-dom';
 
@@ -10,13 +10,13 @@ const LoginPage = ()=>{
     const navigate = useHistory()
     const dispatcher = useDispatch()
 
-    const [username,setEmail] = useState("")
+    const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        axios.post("http://localhost:8080/v1/login",{
-            username,
+        axios.post("http://localhost:8080/api/v1/auth/login",{
+            email,
             password
         },{
             headers:{
@@ -24,8 +24,8 @@ const LoginPage = ()=>{
             }
         }).then(res=>{
             localStorage.setItem("token",res.data.token)
-            localStorage.setItem("email",res.data.username)
-            dispatcher({type:"LOGIN",payload:res.data.username})
+            localStorage.setItem("email",res.data.email)
+            dispatcher({type:"LOGIN",payload:res.data.email})
             navigate.push("/")
         })
     }
@@ -48,7 +48,7 @@ const LoginPage = ()=>{
                 <form onSubmit={handleSubmit}>
                     <div className="form-holder">
                         <label className="form-margin">
-                            username
+                            email
                         </label>
                         <Input className="form-control" onChange={e=>setEmail(e.target.value)} type="text"/>
 

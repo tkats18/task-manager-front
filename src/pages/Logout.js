@@ -1,7 +1,7 @@
 import axios from "axios"
 import React from "react"
 import { useDispatch } from "react-redux"
-import { useHistory } from "react-router"
+import { useHistory } from "react-router-dom"
 
 
 const LogoutPage = ()=>{
@@ -9,7 +9,7 @@ const LogoutPage = ()=>{
     const hist = useHistory()
     const dispatcher = useDispatch()
 
-    axios.get("http://localhost:8080/v1/logout", {
+    axios.get("http://localhost:8080/api/v1/auth/logout", {
         headers:{
             "Authorization":"Bearer "+localStorage.getItem("token").trim()
         }
