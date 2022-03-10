@@ -19,7 +19,6 @@ const MainPage = (authorized) => {
         }
     }
 
-    console.log(authorized)
     useEffect(()=>{
         if(!isLoggedIn){
             hist.push("/login")

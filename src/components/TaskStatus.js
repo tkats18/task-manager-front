@@ -13,7 +13,6 @@ const TaskStatusModal = ({params, fetchData, handleVisible}) => {
     const [selectedStatus, setSelectedStatus] = useState("")
 
     const changeStatus = () => {
-        console.log()
         axios.put(`http://localhost:8080/api/v1/task/${params.taskBusinessKey}/status`, {
             taskStatus: selectedStatus.value
             }, {
@@ -40,9 +39,9 @@ const TaskStatusModal = ({params, fetchData, handleVisible}) => {
         >
             <ModalHeader>
                 <div className="d-f j-c-s-b">
-                    <spam>
+                    <span>
                         Add Task
-                    </spam>
+                    </span>
                     <img src={close} className="modal-header-img" onClick={() => handleVisible(false)}/>
                 </div>
             </ModalHeader>

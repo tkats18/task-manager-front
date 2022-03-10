@@ -18,7 +18,6 @@ const RegisterPage = ()=>{
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        console.log(email,password,fullName)
         axios.post("http://localhost:8080/api/v1/auth/register",{
             email,
             password,
@@ -28,7 +27,6 @@ const RegisterPage = ()=>{
                 "Access-Control-Expose-Headers": "Authorization"
             }
         }).then(res=>{
-            console.log(res);
             localStorage.setItem("token",res.data.token)
             localStorage.setItem("email",res.data.email)
             dispatcher({type:"LOGIN",payload:res.data.email})

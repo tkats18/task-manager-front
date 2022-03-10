@@ -13,8 +13,10 @@ const TaskAssignModal = ({params, fetchData, handleVisible}) => {
     const [selectedUsers, setSelectedUsers] = useState([])
 
     useEffect(()=>{
-        fetchUsers()
-    },[])
+        if (params.isOpen){
+            fetchUsers()
+        }
+    },[params.isOpen])
 
     const fetchUsers=()=>{
         axios.get("http://localhost:8080/api/v1/user/search",{
@@ -33,7 +35,6 @@ const TaskAssignModal = ({params, fetchData, handleVisible}) => {
     }
 
     const assignTask=()=>{
-        console.log()
         axios.put(`http://localhost:8080/api/v1/task/${params.taskBusinessKey}/assign`,{
             users:selectedUsers.map(value => value.value)
             },{
@@ -42,7 +43,6 @@ const TaskAssignModal = ({params, fetchData, handleVisible}) => {
                 }
             }
         ).then(res=>{
-            console.log(res)
             handleVisible(false)
         }).catch(error=>{
             if (error.response && error.response.status===403){
@@ -60,9 +60,9 @@ const TaskAssignModal = ({params, fetchData, handleVisible}) => {
         >
             <ModalHeader>
                 <div className="d-f j-c-s-b">
-                    <spam>
+                    <span>
                         Add Task
-                    </spam>
+                    </span>
                     <img src={close} className="modal-header-img" onClick={() => handleVisible(false)}/>
                 </div>
             </ModalHeader>

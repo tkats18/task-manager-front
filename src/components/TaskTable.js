@@ -38,7 +38,6 @@ const TaskTable = () => {
 
     useEffect(() => {
         fetchUsers()
-        fetchData()
     }, [])
 
     useEffect(() => {
@@ -46,9 +45,6 @@ const TaskTable = () => {
     }, [userFilter, statusFilter, dueFilter])
 
     const fetchData = () => {
-        console.log(statusFilter)
-        console.log(dueFilter)
-        console.log(userFilter)
 
         axios.post("http://localhost:8080/api/v1/task/search", {
                 dueFilter: dueFilter == null ? null : dueFilter.value,
@@ -60,7 +56,6 @@ const TaskTable = () => {
                 }
             }
         ).then(res => {
-            console.log(res)
             setData(res.data)
         }).catch(error => {
             if (error.response && error.response.status === 403) {
@@ -76,7 +71,7 @@ const TaskTable = () => {
                     'Authorization': `Bearer ${localStorage.getItem("token")}`,
                 }
             }
-        ).then(res => {
+        ).then(_ => {
             fetchData()
         }).catch(error => {
             if (error.response && error.response.status === 403) {
@@ -93,7 +88,6 @@ const TaskTable = () => {
                 }
             }
         ).then(res => {
-            console.log(res)
             setUserOptions(res.data.map((val) => ({label: val.email, value: val.userBusinessKey})))
         }).catch(error => {
             if (error.response && error.response.status === 403) {
@@ -169,7 +163,7 @@ const TaskTable = () => {
                                         </thead>
                                         <tbody className="table-body">
                                         {data.map((value, key) => (
-                                            <tr style={value.timeline === "OVERDUE" || value.timeline === "NEAR_DUE" ? {backgroundColor: "#00800052"} : {}}>
+                                            <tr key={key} style={value.timeline === "OVERDUE" || value.timeline === "NEAR_DUE" ? {backgroundColor: "#00800052"} : {}}>
                                                 <td>
                                                     <p className="mb-0 small-p">{value.title}</p>
                                                 </td>

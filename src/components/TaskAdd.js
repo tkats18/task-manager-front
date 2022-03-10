@@ -44,9 +44,9 @@ const TaskAddModal = ({params,fetchData,handleVisible}) => {
         >
             <ModalHeader>
                 <div className="d-f j-c-s-b">
-                    <spam>
+                    <span>
                         Add Task
-                    </spam>
+                    </span>
                     <img src={close} className="modal-header-img" onClick={()=>handleVisible(false)}/>
                 </div>
             </ModalHeader>
