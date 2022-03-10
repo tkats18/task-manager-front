@@ -12,12 +12,6 @@ const MainPage = (authorized) => {
 
     const isLoggedIn = localStorage.getItem("token");
     const hist = useHistory()
-    const [activeTab, setactiveTab] = useState('1');
-    function toggleTab(tab) {
-        if (activeTab !== tab) {
-            setactiveTab(tab)
-        }
-    }
 
     useEffect(()=>{
         if(!isLoggedIn){
